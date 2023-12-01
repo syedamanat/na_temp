@@ -15,9 +15,11 @@ export function SignInButton() {
     return <Link href={"/dashboard"}>dashboard</Link>;
   }
 
-  return <button onClick={() => signIn()}></button>;
+  return <button onClick={() => signIn()}>Sign In</button>;
 }
 
 export function SignOutButton() {
-  return <button onClick={() => signOut()}>Sign out</button>;
+  return (
+    <button onClick={() => signOut({ callbackUrl: "/" })}>Sign out</button>
+  );
 }
